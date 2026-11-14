@@ -81,6 +81,12 @@ export function fontFamilies(value) {
     .filter(Boolean);
 }
 
+/** Font families part of a `font` shorthand (everything after the size). */
+export function fontShorthandFamilies(value) {
+  const m = String(value).match(/(?:^|\s)[\d.]+[a-z%]*(?:\s*\/\s*[\d.]+[a-z%]*)?\s+(.+)$/i);
+  return m ? m[1] : null;
+}
+
 export function isJapaneseFont(name) {
   const n = name.toLowerCase();
   if (/[\u3040-\u30ff\u4e00-\u9fff]/.test(n)) return true;
@@ -113,10 +119,11 @@ export function isJapaneseContext(decl, options = {}) {
       for (const d of n.nodes) {
         if (d.type !== 'decl') continue;
         const p = d.prop.toLowerCase();
-        if (p === 'font-family') {
-          const first = fontFamilies(d.value)[0];
-          if (first && isJapaneseFont(first)) return true;
-        }
+        let families = null;
+        if (p === 'font-family') families = d.value;
+        if (p === 'font') families = fontShorthandFamilies(d.value);
+        const first = families && fontFamilies(families)[0];
+        if (first && isJapaneseFont(first)) return true;
       }
     }
     n = n.parent;
