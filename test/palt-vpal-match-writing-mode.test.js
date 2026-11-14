@@ -14,6 +14,10 @@ testRule({
     },
     { code: '.v { writing-mode: vertical-rl; font-feature-settings: "palt" 0; }' },
     { code: '.v { writing-mode: vertical-rl; font-feature-settings: var(--ff); }' },
+    {
+      code: '.v { writing-mode: vertical-rl; font-feature-settings: "kern"; }',
+      description: 'kerning is left to font-kerning',
+    },
   ],
   reject: [
     {

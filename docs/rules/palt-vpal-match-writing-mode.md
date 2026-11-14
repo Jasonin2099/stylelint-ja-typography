@@ -2,7 +2,7 @@
 
 [日本語](./palt-vpal-match-writing-mode.ja.md)
 
-Require the vertical variants of spacing features (`vpal`, `vhal`, `vkrn`) in vertical writing modes, and the horizontal ones (`palt`, `halt`, `kern`) in horizontal modes.
+Require the vertical variants of spacing features (`vpal`, `vhal`) in vertical writing modes, and the horizontal ones (`palt`, `halt`) in horizontal modes.
 
 ```css
 .tategaki {
@@ -17,7 +17,7 @@ Require the vertical variants of spacing features (`vpal`, `vhal`, `vkrn`) in ve
 
 OpenType keeps separate features for horizontal and vertical metrics. `palt` adjusts *advance widths*; in vertical text the advance is the glyph's *height*, which is what `vpal` adjusts. CSS Fonts 4 names the pair explicitly: “enabled with the `palt` feature, or, for vertical typesetting, the `vpal` feature” ([§ font-kerning](https://www.w3.org/TR/css-fonts-4/#font-kerning-prop)). Using `palt` in `vertical-rl` text either does nothing or shifts glyphs sideways off the column centre.
 
-The same pairing applies to `halt`/`vhal` (half widths) and `kern`/`vkrn` (kerning).
+The same pairing applies to `halt`/`vhal` (half widths). Kerning (`kern`/`vkrn`) is not checked: use `font-kerning: normal`, which CSS Fonts 4 says “will set the kern or vkrn feature depending on the writing-mode”.
 
 When `text-orientation: sideways` is set, a vertical line is laid out like rotated horizontal text ([CSS Writing Modes 3 § text-orientation](https://www.w3.org/TR/css-writing-modes-3/#text-orientation)), so the horizontal features are expected. `sideways-rl` / `sideways-lr` are treated as horizontal for the same reason.
 

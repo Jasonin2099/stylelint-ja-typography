@@ -18,7 +18,9 @@ export const messages = ruleMessages(ruleName, {
 
 const meta = { url: ruleUrl(name), fixable: true };
 
-const TO_VERTICAL = { palt: 'vpal', halt: 'vhal', kern: 'vkrn' };
+// kern/vkrn are left to font-kerning, which picks the right one for the
+// writing mode (CSS Fonts 4, font-feature-settings replacement table).
+const TO_VERTICAL = { palt: 'vpal', halt: 'vhal' };
 const TO_HORIZONTAL = Object.fromEntries(Object.entries(TO_VERTICAL).map(([h, v]) => [v, h]));
 
 const VERTICAL = new Set(['vertical-rl', 'vertical-lr', 'tb', 'tb-rl']);
