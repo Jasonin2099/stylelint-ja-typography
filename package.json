@@ -14,6 +14,7 @@
     "docs",
     "README.md",
     "README.ja.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "scripts": {
