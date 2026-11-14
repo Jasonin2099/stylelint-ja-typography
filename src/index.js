@@ -1,5 +1,6 @@
 import keepAllNeedsOverflowWrap from './rules/keep-all-needs-overflow-wrap.js';
 import noLineBreakAnywhere from './rules/no-line-break-anywhere.js';
+import noObsoleteWritingMode from './rules/no-obsolete-writing-mode.js';
 import noPaltOnBodyText from './rules/no-palt-on-body-text.js';
 import noSyntheticItalic from './rules/no-synthetic-italic.js';
 import paltVpalMatchWritingMode from './rules/palt-vpal-match-writing-mode.js';
@@ -10,6 +11,7 @@ import preferFontVariantEastAsian from './rules/prefer-font-variant-east-asian.j
 const plugins = [
   keepAllNeedsOverflowWrap,
   noLineBreakAnywhere,
+  noObsoleteWritingMode,
   noPaltOnBodyText,
   noSyntheticItalic,
   paltVpalMatchWritingMode,
