@@ -1,4 +1,5 @@
 import keepAllNeedsOverflowWrap from './rules/keep-all-needs-overflow-wrap.js';
+import noLineBreakAnywhere from './rules/no-line-break-anywhere.js';
 import noPaltOnBodyText from './rules/no-palt-on-body-text.js';
 import noSyntheticItalic from './rules/no-synthetic-italic.js';
 import paltVpalMatchWritingMode from './rules/palt-vpal-match-writing-mode.js';
@@ -7,6 +8,7 @@ import paltVpalMatchWritingMode from './rules/palt-vpal-match-writing-mode.js';
 // See docs/rules/ for documentation.
 const plugins = [
   keepAllNeedsOverflowWrap,
+  noLineBreakAnywhere,
   noPaltOnBodyText,
   noSyntheticItalic,
   paltVpalMatchWritingMode,
