@@ -1,0 +1,52 @@
+{
+  "name": "stylelint-ja-typography",
+  "version": "0.1.0",
+  "description": "Stylelint rules that catch common Japanese web typography mistakes (palt on body text, synthetic italics, keep-all overflow, obsolete writing-mode values, and more).",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./recommended": "./src/configs/recommended.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./src/index.js",
+  "files": [
+    "src",
+    "docs",
+    "README.md",
+    "README.ja.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test \"test/**/*.test.js\""
+  },
+  "keywords": [
+    "stylelint",
+    "stylelint-plugin",
+    "japanese",
+    "typography",
+    "cjk",
+    "css",
+    "jlreq",
+    "組版"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jasonin2099/stylelint-ja-typography.git"
+  },
+  "bugs": "https://github.com/Jasonin2099/stylelint-ja-typography/issues",
+  "homepage": "https://github.com/Jasonin2099/stylelint-ja-typography#readme",
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "stylelint": "^16.17.0 || ^17.0.0 || ^18.0.0"
+  },
+  "dependencies": {
+    "postcss-selector-parser": "^7.1.0",
+    "postcss-value-parser": "^4.2.0"
+  },
+  "devDependencies": {
+    "stylelint": "^18.0.0"
+  }
+}
