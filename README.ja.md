@@ -53,6 +53,7 @@ Node.js 22 以上と、Stylelint 16.17 以上・17・18 に対応しています
 | [no-palt-on-body-text](docs/rules/no-palt-on-body-text.ja.md) | 本文への `palt`・`pkna` を禁止（本文はベタ組みが原則） | ✅ |
 | [no-synthetic-italic](docs/rules/no-synthetic-italic.ja.md) | 字形を傾けて合成される日本語の斜体を禁止 | ✅ |
 | [palt-vpal-match-writing-mode](docs/rules/palt-vpal-match-writing-mode.ja.md) | 縦書きでは `vpal`・`vhal`、横書きでは `palt`・`halt` を使う | ✅ 🔧 |
+| [prefer-font-kerning](docs/rules/prefer-font-kerning.ja.md) | `font-feature-settings` の `"kern"`・`"vkrn"` の代わりに `font-kerning` を使う | ✅ 🔧 |
 | [prefer-font-variant-east-asian](docs/rules/prefer-font-variant-east-asian.ja.md) | `font-feature-settings` の `"pwid"`・`"jp78"`・`"ruby"` などの代わりに `font-variant-east-asian` を使う | ✅ 🔧 |
 | [text-combine-upright-supported](docs/rules/text-combine-upright-supported.ja.md) | 未対応の `text-combine-upright: digits` や古い `-webkit-text-combine` を報告 | ✅ 🔧 |
 

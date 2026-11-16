@@ -13,6 +13,7 @@ export default {
     'ja-typography/no-palt-on-body-text': true,
     'ja-typography/no-synthetic-italic': true,
     'ja-typography/palt-vpal-match-writing-mode': true,
+    'ja-typography/prefer-font-kerning': true,
     'ja-typography/prefer-font-variant-east-asian': true,
     'ja-typography/text-combine-upright-supported': true,
   },

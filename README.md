@@ -53,6 +53,7 @@ Or pick rules yourself:
 | [no-palt-on-body-text](docs/rules/no-palt-on-body-text.md) | Disallow `palt`/`pkna` on body text; Japanese running text is set solid (ベタ組み) | ✅ |
 | [no-synthetic-italic](docs/rules/no-synthetic-italic.md) | Disallow italic/oblique on Japanese text, which the browser fakes by skewing glyphs | ✅ |
 | [palt-vpal-match-writing-mode](docs/rules/palt-vpal-match-writing-mode.md) | Use `vpal`/`vhal` in vertical text and `palt`/`halt` in horizontal text | ✅ 🔧 |
+| [prefer-font-kerning](docs/rules/prefer-font-kerning.md) | Use `font-kerning` instead of `"kern"` / `"vkrn"` in `font-feature-settings` | ✅ 🔧 |
 | [prefer-font-variant-east-asian](docs/rules/prefer-font-variant-east-asian.md) | Use `font-variant-east-asian` instead of `"pwid"`, `"jp78"`, `"ruby"` … in `font-feature-settings` | ✅ 🔧 |
 | [text-combine-upright-supported](docs/rules/text-combine-upright-supported.md) | Report unsupported `text-combine-upright: digits` and legacy `-webkit-text-combine` | ✅ 🔧 |
 
