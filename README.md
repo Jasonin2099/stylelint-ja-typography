@@ -55,6 +55,7 @@ Or pick rules yourself:
 | [palt-vpal-match-writing-mode](docs/rules/palt-vpal-match-writing-mode.md) | Use `vpal`/`vhal` in vertical text and `palt`/`halt` in horizontal text | ✅ 🔧 |
 | [prefer-font-kerning](docs/rules/prefer-font-kerning.md) | Use `font-kerning` instead of `"kern"` / `"vkrn"` in `font-feature-settings` | ✅ 🔧 |
 | [prefer-font-variant-east-asian](docs/rules/prefer-font-variant-east-asian.md) | Use `font-variant-east-asian` instead of `"pwid"`, `"jp78"`, `"ruby"` … in `font-feature-settings` | ✅ 🔧 |
+| [ruby-position-vertical](docs/rules/ruby-position-vertical.md) | Disallow `ruby-position: under` in vertical text, where it puts ruby on the left of the base characters | ✅ |
 | [text-combine-upright-supported](docs/rules/text-combine-upright-supported.md) | Report unsupported `text-combine-upright: digits` and legacy `-webkit-text-combine` | ✅ 🔧 |
 
 ## How “Japanese text” is detected

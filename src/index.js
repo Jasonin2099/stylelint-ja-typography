@@ -6,6 +6,7 @@ import noSyntheticItalic from './rules/no-synthetic-italic.js';
 import paltVpalMatchWritingMode from './rules/palt-vpal-match-writing-mode.js';
 import preferFontKerning from './rules/prefer-font-kerning.js';
 import preferFontVariantEastAsian from './rules/prefer-font-variant-east-asian.js';
+import rubyPositionVertical from './rules/ruby-position-vertical.js';
 import textCombineUprightSupported from './rules/text-combine-upright-supported.js';
 
 // Each rule module exports a Stylelint plugin created with createPlugin().
@@ -19,6 +20,7 @@ const plugins = [
   paltVpalMatchWritingMode,
   preferFontKerning,
   preferFontVariantEastAsian,
+  rubyPositionVertical,
   textCombineUprightSupported,
 ];
 

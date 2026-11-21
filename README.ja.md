@@ -55,6 +55,7 @@ Node.js 22 以上と、Stylelint 16.17 以上・17・18 に対応しています
 | [palt-vpal-match-writing-mode](docs/rules/palt-vpal-match-writing-mode.ja.md) | 縦書きでは `vpal`・`vhal`、横書きでは `palt`・`halt` を使う | ✅ 🔧 |
 | [prefer-font-kerning](docs/rules/prefer-font-kerning.ja.md) | `font-feature-settings` の `"kern"`・`"vkrn"` の代わりに `font-kerning` を使う | ✅ 🔧 |
 | [prefer-font-variant-east-asian](docs/rules/prefer-font-variant-east-asian.ja.md) | `font-feature-settings` の `"pwid"`・`"jp78"`・`"ruby"` などの代わりに `font-variant-east-asian` を使う | ✅ 🔧 |
+| [ruby-position-vertical](docs/rules/ruby-position-vertical.ja.md) | 縦書きでルビを親文字の左側に付けてしまう `ruby-position: under` を禁止 | ✅ |
 | [text-combine-upright-supported](docs/rules/text-combine-upright-supported.ja.md) | 未対応の `text-combine-upright: digits` や古い `-webkit-text-combine` を報告 | ✅ 🔧 |
 
 ## 「日本語のテキスト」の判定
