@@ -58,6 +58,25 @@ Or pick rules yourself:
 | [ruby-position-vertical](docs/rules/ruby-position-vertical.md) | Disallow `ruby-position: under` in vertical text, where it puts ruby on the left of the base characters | ✅ |
 | [text-combine-upright-supported](docs/rules/text-combine-upright-supported.md) | Report unsupported `text-combine-upright: digits` and legacy `-webkit-text-combine` | ✅ 🔧 |
 
+## Stylelint core rules worth enabling
+
+Some old Japanese-text CSS is already caught by Stylelint itself, so this plugin does not duplicate it. Both rules below are on in `stylelint-config-recommended` 19 (and so in `stylelint-config-standard` 41). If you do not extend either, turn them on next to this plugin's `recommended`:
+
+| Core rule | Catches |
+| --- | --- |
+| `declaration-property-value-keyword-no-deprecated` | `text-orientation: sideways-right` (→ `sideways`), `text-justify: distribute` (→ `inter-character`), `word-break: break-word` |
+| `property-no-deprecated` | `ime-mode` |
+
+```json
+{
+  "extends": ["stylelint-ja-typography/recommended"],
+  "rules": {
+    "declaration-property-value-keyword-no-deprecated": true,
+    "property-no-deprecated": true
+  }
+}
+```
+
 ## How “Japanese text” is detected
 
 CSS does not know the language of the page. Rules that only make sense for Japanese text (such as `no-synthetic-italic`) treat a declaration as Japanese when:

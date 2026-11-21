@@ -26,8 +26,8 @@ Each item is meant to be one self-contained change (rule or improvement + tests 
 - [ ] `text-autospace-initial-value`: browsers currently ship `no-autospace` as the initial value (browser-compat-data notes); document and optionally require an explicit value on `:lang(ja)` roots.
 - [ ] `word-break-auto-phrase-fallback`: `word-break: auto-phrase` is Chromium-only and Japanese-only; suggest `keep-all` + `overflow-wrap: anywhere` as the base and `@supports` for the enhancement.
 - [ ] `no-break-all-on-mixed-text` (opt-in): `word-break: break-all` splits Latin words in mixed text; CSS Text 3 notes it is meant for mostly-CJK text, so make it configurable rather than recommended.
-- [ ] `vertical-needs-text-orientation-mixed`: report `text-orientation: sideways-right` (obsolete alias of `sideways`) with autofix.
-- [ ] `no-ms-ime-mode`: `ime-mode` is deprecated; Stylelint core may already cover it via `property-no-deprecated`; verify first and document instead if so.
+- [x] ~~`vertical-needs-text-orientation-mixed`~~: not needed. Stylelint core `declaration-property-value-keyword-no-deprecated` already reports `text-orientation: sideways-right` and fixes it to `sideways` (checked with Stylelint 18).
+- [x] ~~`no-ms-ime-mode`~~: not needed. Stylelint core `property-no-deprecated` already reports `ime-mode` (checked with Stylelint 18).
 - [ ] `font-family-japanese-localized-name`: families written only with their Japanese name (`"游ゴシック"`) or only with their English name; check how browsers match localized names and decide whether pairing both is needed.
 - [ ] `yu-gothic-weight`: Yu Gothic Regular renders thin on Windows; suggest `"Yu Gothic Medium"` before `"Yu Gothic"` or `font-weight: 500`. Research current Windows 11 behaviour before shipping.
 - [ ] `no-ms-gothic-first` (opt-in): bitmap-hinted MS Gothic/Mincho listed first.

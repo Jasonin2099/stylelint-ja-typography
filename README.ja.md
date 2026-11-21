@@ -58,6 +58,25 @@ Node.js 22 以上と、Stylelint 16.17 以上・17・18 に対応しています
 | [ruby-position-vertical](docs/rules/ruby-position-vertical.ja.md) | 縦書きでルビを親文字の左側に付けてしまう `ruby-position: under` を禁止 | ✅ |
 | [text-combine-upright-supported](docs/rules/text-combine-upright-supported.ja.md) | 未対応の `text-combine-upright: digits` や古い `-webkit-text-combine` を報告 | ✅ 🔧 |
 
+## あわせて有効にしたい Stylelint 本体のルール
+
+日本語向けの古い CSS の一部は Stylelint 本体がすでに検出するので、このプラグインでは重ねて扱いません。下の2つは `stylelint-config-recommended` 19（したがって `stylelint-config-standard` 41）で有効になっています。どちらも使っていない場合は、このプラグインの `recommended` と並べて有効にしてください。
+
+| 本体のルール | 検出するもの |
+| --- | --- |
+| `declaration-property-value-keyword-no-deprecated` | `text-orientation: sideways-right`（→ `sideways`）、`text-justify: distribute`（→ `inter-character`）、`word-break: break-word` |
+| `property-no-deprecated` | `ime-mode` |
+
+```json
+{
+  "extends": ["stylelint-ja-typography/recommended"],
+  "rules": {
+    "declaration-property-value-keyword-no-deprecated": true,
+    "property-no-deprecated": true
+  }
+}
+```
+
 ## 「日本語のテキスト」の判定
 
 CSS だけではページの言語はわかりません。日本語にだけ当てはまるルール（`no-synthetic-italic` など）は、次のどれかに当てはまる宣言を日本語として扱います。
