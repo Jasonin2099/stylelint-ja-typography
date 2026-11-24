@@ -57,6 +57,7 @@ Or pick rules yourself:
 | [prefer-font-variant-east-asian](docs/rules/prefer-font-variant-east-asian.md) | Use `font-variant-east-asian` instead of `"pwid"`, `"jp78"`, `"ruby"` … in `font-feature-settings` | ✅ 🔧 |
 | [ruby-position-vertical](docs/rules/ruby-position-vertical.md) | Disallow `ruby-position: under` in vertical text, where it puts ruby on the left of the base characters | ✅ |
 | [text-combine-upright-supported](docs/rules/text-combine-upright-supported.md) | Report unsupported `text-combine-upright: digits` and legacy `-webkit-text-combine` | ✅ 🔧 |
+| [text-emphasis-position-japanese](docs/rules/text-emphasis-position-japanese.md) | Disallow `text-emphasis-position: under` / `left` on Japanese text, which puts emphasis marks (圏点) below or on the left | ✅ |
 
 ## Stylelint core rules worth enabling
 

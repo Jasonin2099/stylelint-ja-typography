@@ -19,7 +19,7 @@ Each item is meant to be one self-contained change (rule or improvement + tests 
 - [ ] `font-feature-settings-keep-inherited`: a child rule that sets `font-feature-settings` without `palt` silently drops an inherited `palt` (no merging in CSS Fonts 4). Report when the stylesheet enables `palt` on an ancestor-like selector and a descendant overrides the list.
 - [x] `prefer-font-kerning`: `"kern"` / `"vkrn"` in `font-feature-settings` → `font-kerning` (CSS Fonts 4 replacement table). Autofix when they are the only features.
 - [ ] `no-letter-spacing-on-body-text` (opt-in, not recommended): wide `letter-spacing` on Japanese running text breaks the em grid; allow on headings. Needs a sensible threshold option.
-- [ ] `text-emphasis-needs-position`: `text-emphasis` in horizontal Japanese should usually be `over right`; check `text-emphasis-position` for `:lang(ja)` rules and vertical modes.
+- [x] `text-emphasis-position-japanese` (planned as `text-emphasis-needs-position`): the initial value `over right` is already right for Japanese, so instead of requiring a position the rule reports `under` / `left` on Japanese text and Japanese emphasis that inherits them from a root rule (CSS Text Decoration 3 § 3.4, JLREQ § 3.3.9).
 - [x] `ruby-position-vertical`: `ruby-position: under` in vertical Japanese puts ruby on the left; flag unless intended.
 - [ ] `no-text-orientation-upright-for-latin` (opt-in): `text-orientation: upright` on whole vertical paragraphs stacks Latin words letter by letter; suggest `mixed` plus `text-combine-upright` for short runs.
 - [ ] `text-spacing-trim-value`: validate values against CSS Text 4 (`normal`, `space-all`, `space-first`, `trim-start`, …) and warn about values only in older drafts.

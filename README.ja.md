@@ -57,6 +57,7 @@ Node.js 22 以上と、Stylelint 16.17 以上・17・18 に対応しています
 | [prefer-font-variant-east-asian](docs/rules/prefer-font-variant-east-asian.ja.md) | `font-feature-settings` の `"pwid"`・`"jp78"`・`"ruby"` などの代わりに `font-variant-east-asian` を使う | ✅ 🔧 |
 | [ruby-position-vertical](docs/rules/ruby-position-vertical.ja.md) | 縦書きでルビを親文字の左側に付けてしまう `ruby-position: under` を禁止 | ✅ |
 | [text-combine-upright-supported](docs/rules/text-combine-upright-supported.ja.md) | 未対応の `text-combine-upright: digits` や古い `-webkit-text-combine` を報告 | ✅ 🔧 |
+| [text-emphasis-position-japanese](docs/rules/text-emphasis-position-japanese.ja.md) | 日本語の圏点を下（横組）や左（縦組）に付けてしまう `text-emphasis-position: under` / `left` を禁止 | ✅ |
 
 ## あわせて有効にしたい Stylelint 本体のルール
 

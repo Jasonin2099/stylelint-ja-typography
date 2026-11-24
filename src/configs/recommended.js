@@ -17,5 +17,6 @@ export default {
     'ja-typography/prefer-font-variant-east-asian': true,
     'ja-typography/ruby-position-vertical': true,
     'ja-typography/text-combine-upright-supported': true,
+    'ja-typography/text-emphasis-position-japanese': true,
   },
 };
