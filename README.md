@@ -47,6 +47,7 @@ Or pick rules yourself:
 
 | Rule | Description | |
 | --- | --- | --- |
+| [font-feature-settings-keep-inherited](docs/rules/font-feature-settings-keep-inherited.md) | Report `font-feature-settings` lists (or `font` shorthands) that drop an inherited `palt` / `vpal` …, since the property is not merged | ✅ |
 | [keep-all-needs-overflow-wrap](docs/rules/keep-all-needs-overflow-wrap.md) | `word-break: keep-all` must come with `overflow-wrap: anywhere` so unspaced Japanese can still wrap | ✅ |
 | [no-line-break-anywhere](docs/rules/no-line-break-anywhere.md) | Disallow `line-break: anywhere`, which turns off kinsoku (禁則処理) | ✅ |
 | [no-obsolete-writing-mode](docs/rules/no-obsolete-writing-mode.md) | Replace `tb-rl`, `lr-tb` and other SVG 1.1 values with `vertical-rl` / `horizontal-tb` | ✅ 🔧 |

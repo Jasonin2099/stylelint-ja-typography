@@ -1,3 +1,4 @@
+import fontFeatureSettingsKeepInherited from './rules/font-feature-settings-keep-inherited.js';
 import keepAllNeedsOverflowWrap from './rules/keep-all-needs-overflow-wrap.js';
 import noLineBreakAnywhere from './rules/no-line-break-anywhere.js';
 import noObsoleteWritingMode from './rules/no-obsolete-writing-mode.js';
@@ -13,6 +14,7 @@ import textEmphasisPositionJapanese from './rules/text-emphasis-position-japanes
 // Each rule module exports a Stylelint plugin created with createPlugin().
 // See docs/rules/ for documentation.
 const plugins = [
+  fontFeatureSettingsKeepInherited,
   keepAllNeedsOverflowWrap,
   noLineBreakAnywhere,
   noObsoleteWritingMode,

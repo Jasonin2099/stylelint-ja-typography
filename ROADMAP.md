@@ -16,7 +16,7 @@ Each item is meant to be one self-contained change (rule or improvement + tests 
 
 ## Next rules
 
-- [ ] `font-feature-settings-keep-inherited`: a child rule that sets `font-feature-settings` without `palt` silently drops an inherited `palt` (no merging in CSS Fonts 4). Report when the stylesheet enables `palt` on an ancestor-like selector and a descendant overrides the list.
+- [x] `font-feature-settings-keep-inherited`: a child rule that sets `font-feature-settings` without `palt` silently drops an inherited `palt` (no merging in CSS Fonts 4). Report when the stylesheet enables `palt` on an ancestor-like selector and a descendant overrides the list. Also covers the `font` shorthand (resets the property) and the same element with extra conditions (`.a:hover`); watches the CJK features by default.
 - [x] `prefer-font-kerning`: `"kern"` / `"vkrn"` in `font-feature-settings` → `font-kerning` (CSS Fonts 4 replacement table). Autofix when they are the only features.
 - [ ] `no-letter-spacing-on-body-text` (opt-in, not recommended): wide `letter-spacing` on Japanese running text breaks the em grid; allow on headings. Needs a sensible threshold option.
 - [x] `text-emphasis-position-japanese` (planned as `text-emphasis-needs-position`): the initial value `over right` is already right for Japanese, so instead of requiring a position the rule reports `under` / `left` on Japanese text and Japanese emphasis that inherits them from a root rule (CSS Text Decoration 3 § 3.4, JLREQ § 3.3.9).

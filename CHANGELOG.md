@@ -2,6 +2,7 @@
 
 ## Unreleased (0.1.0)
 
+- `font-feature-settings-keep-inherited`: report a `font-feature-settings` list or `font` shorthand that drops a Japanese OpenType feature (`palt`, `vpal`, `pkna`, …) set on an enclosing, ancestor or root rule — the property is replaced, not merged (CSS Fonts 4 § 6.12).
 - `text-emphasis-position-japanese`: report `text-emphasis-position: under` / `left` on Japanese text, and Japanese emphasis that inherits them from `html` / `:root` / `body` / `*` (JLREQ puts 圏点 above horizontal and right of vertical text).
 - `ruby-position-vertical`: report `ruby-position: under` / `-webkit-ruby-position: after` in vertical text (ruby on the left; JLREQ puts it on the right).
 - `prefer-font-kerning`: use `font-kerning` instead of `"kern"` / `"vkrn"` in `font-feature-settings` (autofix when they are the only features).

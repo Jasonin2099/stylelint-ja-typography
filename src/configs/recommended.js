@@ -7,6 +7,7 @@ import plugins from '../index.js';
 export default {
   plugins,
   rules: {
+    'ja-typography/font-feature-settings-keep-inherited': true,
     'ja-typography/keep-all-needs-overflow-wrap': true,
     'ja-typography/no-line-break-anywhere': true,
     'ja-typography/no-obsolete-writing-mode': true,

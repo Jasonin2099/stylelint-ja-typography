@@ -47,6 +47,7 @@ Node.js 22 以上と、Stylelint 16.17 以上・17・18 に対応しています
 
 | ルール | 内容 | |
 | --- | --- | --- |
+| [font-feature-settings-keep-inherited](docs/rules/font-feature-settings-keep-inherited.ja.md) | 継承した `palt` / `vpal` などを打ち消す `font-feature-settings`（または `font` 一括指定）を報告（このプロパティはマージされない） | ✅ |
 | [keep-all-needs-overflow-wrap](docs/rules/keep-all-needs-overflow-wrap.ja.md) | `word-break: keep-all` には `overflow-wrap: anywhere` を付け、スペースのない日本語でも改行できるようにする | ✅ |
 | [no-line-break-anywhere](docs/rules/no-line-break-anywhere.ja.md) | 禁則処理が効かなくなる `line-break: anywhere` を禁止 | ✅ |
 | [no-obsolete-writing-mode](docs/rules/no-obsolete-writing-mode.ja.md) | `tb-rl`・`lr-tb` などの古い値を `vertical-rl`・`horizontal-tb` に置き換える | ✅ 🔧 |
