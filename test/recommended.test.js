@@ -8,16 +8,18 @@ import plugins from '../src/index.js';
 import recommended from '../src/configs/recommended.js';
 
 const RECOMMENDED = fileURLToPath(new URL('../src/configs/recommended.js', import.meta.url));
+// Rules that are documented and exported but deliberately left out of `recommended`.
+const OPT_IN = new Set(['text-autospace-initial-value']);
 const ruleFiles = readdirSync(new URL('../src/rules/', import.meta.url)).map((f) => f.replace(/\.js$/, ''));
 
-test('every rule is exported, documented in both languages and enabled in recommended', () => {
+test('every rule is exported, documented in both languages and enabled in recommended (except opt-in rules)', () => {
   const names = plugins.map((p) => p.ruleName.replace('ja-typography/', '')).sort();
   assert.deepEqual(names, ruleFiles.sort());
   const docs = readdirSync(new URL('../docs/rules/', import.meta.url));
   for (const name of names) {
     assert.ok(docs.includes(`${name}.md`), `${name}.md`);
     assert.ok(docs.includes(`${name}.ja.md`), `${name}.ja.md`);
-    assert.equal(recommended.rules[`ja-typography/${name}`], true, name);
+    assert.equal(recommended.rules[`ja-typography/${name}`], OPT_IN.has(name) ? undefined : true, name);
   }
 });
 

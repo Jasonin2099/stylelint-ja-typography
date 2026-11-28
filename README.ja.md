@@ -43,7 +43,7 @@ Node.js 22 以上と、Stylelint 16.17 以上・17・18 に対応しています
 
 ## ルール一覧
 
-🔧 = `stylelint --fix` で修正できる。✅ = `recommended` で有効。
+🔧 = `stylelint --fix` で修正できる。✅ = `recommended` で有効。✅ のないルールはオプトインです。
 
 | ルール | 内容 | |
 | --- | --- | --- |
@@ -57,6 +57,7 @@ Node.js 22 以上と、Stylelint 16.17 以上・17・18 に対応しています
 | [prefer-font-kerning](docs/rules/prefer-font-kerning.ja.md) | `font-feature-settings` の `"kern"`・`"vkrn"` の代わりに `font-kerning` を使う | ✅ 🔧 |
 | [prefer-font-variant-east-asian](docs/rules/prefer-font-variant-east-asian.ja.md) | `font-feature-settings` の `"pwid"`・`"jp78"`・`"ruby"` などの代わりに `font-variant-east-asian` を使う | ✅ 🔧 |
 | [ruby-position-vertical](docs/rules/ruby-position-vertical.ja.md) | 縦書きでルビを親文字の左側に付けてしまう `ruby-position: under` を禁止 | ✅ |
+| [text-autospace-initial-value](docs/rules/text-autospace-initial-value.ja.md) | 仕様（`normal`）と全ブラウザー（`no-autospace`）で食い違う初期値に行き着く `text-autospace: initial` / `revert` を報告（`requireOnRoot` では、日本語のルートがこの値を一度も設定していない場合も） | |
 | [text-combine-upright-supported](docs/rules/text-combine-upright-supported.ja.md) | 未対応の `text-combine-upright: digits` や古い `-webkit-text-combine` を報告 | ✅ 🔧 |
 | [text-emphasis-position-japanese](docs/rules/text-emphasis-position-japanese.ja.md) | 日本語の圏点を下（横組）や左（縦組）に付けてしまう `text-emphasis-position: under` / `left` を禁止 | ✅ |
 | [text-spacing-trim-value](docs/rules/text-spacing-trim-value.ja.md) | ブラウザーが無視する `text-spacing-trim` の値を報告（フォールバックなしの未実装値 `trim-both`・`trim-all`・`auto`、編集者草案のみの位置別キーワード、削除済み・別プロパティの値） | ✅ |

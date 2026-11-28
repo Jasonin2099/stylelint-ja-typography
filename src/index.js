@@ -8,6 +8,7 @@ import paltVpalMatchWritingMode from './rules/palt-vpal-match-writing-mode.js';
 import preferFontKerning from './rules/prefer-font-kerning.js';
 import preferFontVariantEastAsian from './rules/prefer-font-variant-east-asian.js';
 import rubyPositionVertical from './rules/ruby-position-vertical.js';
+import textAutospaceInitialValue from './rules/text-autospace-initial-value.js';
 import textCombineUprightSupported from './rules/text-combine-upright-supported.js';
 import textEmphasisPositionJapanese from './rules/text-emphasis-position-japanese.js';
 import textSpacingTrimValue from './rules/text-spacing-trim-value.js';
@@ -25,6 +26,7 @@ const plugins = [
   preferFontKerning,
   preferFontVariantEastAsian,
   rubyPositionVertical,
+  textAutospaceInitialValue,
   textCombineUprightSupported,
   textEmphasisPositionJapanese,
   textSpacingTrimValue,
