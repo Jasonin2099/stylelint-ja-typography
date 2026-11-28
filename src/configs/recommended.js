@@ -19,5 +19,6 @@ export default {
     'ja-typography/ruby-position-vertical': true,
     'ja-typography/text-combine-upright-supported': true,
     'ja-typography/text-emphasis-position-japanese': true,
+    'ja-typography/text-spacing-trim-value': true,
   },
 };

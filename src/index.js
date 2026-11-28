@@ -10,6 +10,7 @@ import preferFontVariantEastAsian from './rules/prefer-font-variant-east-asian.j
 import rubyPositionVertical from './rules/ruby-position-vertical.js';
 import textCombineUprightSupported from './rules/text-combine-upright-supported.js';
 import textEmphasisPositionJapanese from './rules/text-emphasis-position-japanese.js';
+import textSpacingTrimValue from './rules/text-spacing-trim-value.js';
 
 // Each rule module exports a Stylelint plugin created with createPlugin().
 // See docs/rules/ for documentation.
@@ -26,6 +27,7 @@ const plugins = [
   rubyPositionVertical,
   textCombineUprightSupported,
   textEmphasisPositionJapanese,
+  textSpacingTrimValue,
 ];
 
 export default plugins;

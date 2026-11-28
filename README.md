@@ -59,6 +59,7 @@ Or pick rules yourself:
 | [ruby-position-vertical](docs/rules/ruby-position-vertical.md) | Disallow `ruby-position: under` in vertical text, where it puts ruby on the left of the base characters | ✅ |
 | [text-combine-upright-supported](docs/rules/text-combine-upright-supported.md) | Report unsupported `text-combine-upright: digits` and legacy `-webkit-text-combine` | ✅ 🔧 |
 | [text-emphasis-position-japanese](docs/rules/text-emphasis-position-japanese.md) | Disallow `text-emphasis-position: under` / `left` on Japanese text, which puts emphasis marks (圏点) below or on the left | ✅ |
+| [text-spacing-trim-value](docs/rules/text-spacing-trim-value.md) | Report `text-spacing-trim` values browsers drop: not yet implemented (`trim-both`, `trim-all`, `auto`) without a fallback, Editor's-Draft-only per-position keywords, removed or misplaced values | ✅ |
 
 ## Stylelint core rules worth enabling
 
