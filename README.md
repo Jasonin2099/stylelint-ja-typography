@@ -43,7 +43,7 @@ Or pick rules yourself:
 
 ## Rules
 
-🔧 = fixable with `stylelint --fix`. ✅ = enabled in `recommended`.
+🔧 = fixable with `stylelint --fix`. ✅ = enabled in `recommended`; rules without ✅ are opt-in.
 
 | Rule | Description | |
 | --- | --- | --- |
@@ -57,6 +57,7 @@ Or pick rules yourself:
 | [prefer-font-kerning](docs/rules/prefer-font-kerning.md) | Use `font-kerning` instead of `"kern"` / `"vkrn"` in `font-feature-settings` | ✅ 🔧 |
 | [prefer-font-variant-east-asian](docs/rules/prefer-font-variant-east-asian.md) | Use `font-variant-east-asian` instead of `"pwid"`, `"jp78"`, `"ruby"` … in `font-feature-settings` | ✅ 🔧 |
 | [ruby-position-vertical](docs/rules/ruby-position-vertical.md) | Disallow `ruby-position: under` in vertical text, where it puts ruby on the left of the base characters | ✅ |
+| [text-autospace-initial-value](docs/rules/text-autospace-initial-value.md) | Report `text-autospace: initial` / `revert`, which land on a value the spec (`normal`) and every browser (`no-autospace`) disagree about; with `requireOnRoot`, a Japanese root that never sets it | |
 | [text-combine-upright-supported](docs/rules/text-combine-upright-supported.md) | Report unsupported `text-combine-upright: digits` and legacy `-webkit-text-combine` | ✅ 🔧 |
 | [text-emphasis-position-japanese](docs/rules/text-emphasis-position-japanese.md) | Disallow `text-emphasis-position: under` / `left` on Japanese text, which puts emphasis marks (圏点) below or on the left | ✅ |
 | [text-spacing-trim-value](docs/rules/text-spacing-trim-value.md) | Report `text-spacing-trim` values browsers drop: not yet implemented (`trim-both`, `trim-all`, `auto`) without a fallback, Editor's-Draft-only per-position keywords, removed or misplaced values | ✅ |

@@ -2,6 +2,7 @@
 
 ## Unreleased (0.1.0)
 
+- `text-autospace-initial-value` (opt-in, not in `recommended`): report `text-autospace: initial` / `revert` on Japanese text, which end up on an initial value that CSS Text 4 (`normal`) and Chrome 140 / Firefox 145 / Safari 18.4 (`no-autospace`) disagree about; option `requireOnRoot` also asks a Japanese root rule to set a value.
 - `text-spacing-trim-value`: report `text-spacing-trim` values that browsers drop — `trim-both` / `trim-all` / `auto` (in CSS Text 4, implemented nowhere yet) unless a supported value comes first or `@supports` guards them, the Editor's Draft per-position keywords (`trim-start allow-end`), and invalid values with hints (`none`, `no-compress` from the 2019 `text-spacing` draft; `text-autospace` keywords). Option `ignore: ["unsupported", "draft", "invalid"]`.
 - `font-feature-settings-keep-inherited`: report a `font-feature-settings` list or `font` shorthand that drops a Japanese OpenType feature (`palt`, `vpal`, `pkna`, …) set on an enclosing, ancestor or root rule — the property is replaced, not merged (CSS Fonts 4 § 6.12).
 - `text-emphasis-position-japanese`: report `text-emphasis-position: under` / `left` on Japanese text, and Japanese emphasis that inherits them from `html` / `:root` / `body` / `*` (JLREQ puts 圏点 above horizontal and right of vertical text).
